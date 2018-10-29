@@ -1,0 +1,42 @@
+# Site settings
+title: Joshua Collins Blog
+description: 'Blog about all things infosec'
+url: 'http://exord66.github.io'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Josh Collins'
+  email: josh.collins.mlb@gmail.com
+  twitter_username: exord66
+  github_username:  exord66
+  linkedin_username:  joshua-collins-875702107
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 5
+permalink: /:title
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate', 'jekyll-gist']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png', 'vendor']
